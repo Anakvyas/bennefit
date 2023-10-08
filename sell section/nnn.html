@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    
+        
+
+        .boxslide {
+            top: 70px;
+            background: gainsboro;
+            width: 271x;
+            height: 600px;
+            border: 1px solid black;
+            box-shadow: 2px 2px 7px #131b2a;
+            position: fixed;
+            left: -260px;
+            border-radius:30px;
+            color: aqua;
+            box-sizing: border-box;
+            overflow-y: scroll;
+        
+
+        }
+        .boxslide::-webkit-scrollbar{
+            display: none;
+        }
+
+        #iconx{
+            font-size: 500px;
+            position: fixed;
+            z-index: 1111;
+        }
+        .boxslide #imgx{
+            margin-top: 0px;
+            margin-left: 219px;
+        }
+        .boxslide img:hover{
+            transform: scale(1.1);
+        }
+        .img11{
+            border: 1px solid black ;
+            color: black;
+            width:240px;
+            height: 70px;
+            margin: 7px;
+        }
+        .img11 img{
+            margin: 1px;
+        }
+        .img11 A{
+            position: absolute;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+
+<body>
+    
+    
+
+
+    <div class="imgbuy"> <img src="watch.png" alt="" width="100px"></div>
+    <div class="boxslide"><img src="cross.jpg" alt="" width="30px" id="imgx">
+            <div class="img11"><img src="watch.png" alt="" width="83px"><A>BENNEFIT FITNESS <br> BAND</A></div>
+            <div class="img11"><img src="weigh.webp" alt="" width="83px"><A>BENNEFIT FITNESS <br> BAND</A></div>
+            <div class="img11"><img src="sell4.jpeg" alt="" width="83px"><A>BENNEFIT FITNESS <br> BAND</A></div>
+            <div class="img11"><img src="sell5.webp" alt="" width="83px"><A>BENNEFIT FITNESS <br> BAND</A></div>
+            <div class="img11"><img src="sell6.webp" alt="" width="83px"><A>BENNEFIT FITNESS <br> BAND</A></div>
+            <div class="img11"><img src="sell7.webp" alt="" width="83px"><A>BENNEFIT FITNESS <br> BAND</A></div>
+            <div class="img11"><img src="sell8.webp" alt="" width="83px"><A>BENNEFIT FITNESS <br> BAND</A></div>
+            <div class="img11"><img src="watch.png" alt="" width="83px"><A>BENNEFIT FITNESS <br> BAND</A></div>
+            <div class="img11"><img src="watch.png" alt="" width="83px"><A>BENNEFIT FITNESS <br> BAND</A></div>
+            <div class="img11"><img src="watch.png" alt="" width="83px"><A>BENNEFIT FITNESS <br> BAND</A></div>
+            <div class="img11"><img src="watch.png" alt="" width="83px"><A>BENNEFIT FITNESS <br> BAND</A></div>
+    </div>
+
+
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"
+    integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+
+        // var box = document.querySelector(".boxslide");
+        var imgcross = document.querySelector(".imgbuy");
+        var imgx = document.querySelector("#imgx")
+    
+    
+    
+    imgcross.addEventListener("click", () => {
+        gsap.to(".boxslide", {
+             x : 259,
+            duration: 0.7
+        })})
+    imgx.addEventListener('click', () => {
+        gsap.to('.boxslide',{
+            x:-260,
+            duration:0.8
+        })
+    })
+        
+        
+        
+        </script>
+
+    
+
+
+</body>
+
+</html>
