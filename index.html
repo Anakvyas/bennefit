@@ -1,0 +1,44 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diabetic Symptom Test</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Diabetic Symptom Test</h1>
+        <div class="logo"><img src="logo.png" alt="" width="120px"></div>
+    </header>
+    <main>
+        <form id="symptom-form">
+            <h2>Check your symptoms:</h2>
+            <div class="question">
+                <label for="thirsty">Excessive Thirst:</label>
+                <input type="checkbox" id="thirsty" name="symptoms" value="thirsty">
+            </div>
+            <div class="question">
+                <label for="hunger">Excessive Hunger:</label>
+                <input type="checkbox" id="hunger" name="symptoms" value="hunger">
+            </div>
+            <div class="question">
+                <label for="urination">Frequent Urination:</label>
+                <input type="checkbox" id="urination" name="symptoms" value="urination">
+            </div>
+            <div class="question">
+                <label for="fatigue">Fatigue:</label>
+                <input type="checkbox" id="fatigue" name="symptoms" value="fatigue">
+            </div>
+            <div class="question">
+                <label for="blurry-vision">Blurry Vision:</label>
+                <input type="checkbox" id="blurry-vision" name="symptoms" value="blurry-vision">
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+        <div id="result"></div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

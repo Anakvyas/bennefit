@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Testimonial</title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+		body{
+			width: 100%;
+			min-height: 100vh;
+			background-color: #fcfcfc;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		.containercus{
+			position: relative;
+			width: 100%;
+			min-height: 450px;
+			background-color: #f5f5f5;
+		}
+		.container .contents-wrapercus{
+			width: 70%;
+			min-height: inherit;
+			margin: 30px auto;
+			text-align: center;
+		}
+		.contents-wrapercus .headercus h1{
+			position: relative;
+			font-size: 40px;
+			text-transform: uppercase;
+			font-weight: 500;
+			text-align: center;
+			letter-spacing: 1px;
+		}
+		.contents-wrapercus .headercus h1::before{
+			content: '';
+			width: 200px;
+			height: 2px;
+			background-color: #006994;
+			border-radius: 15px;
+			position: absolute;
+			left: 50%;
+			transform: translateX(-50%);
+			bottom: -10px;
+		}
+		.contents-wrapercus .testRowcus{
+			width: 100%;
+			min-height: inherit;
+			position: relative;
+			overflow: hidden;
+		}
+		.testRowcus .testItemcus{
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+		}
+		.testRowcus .testItemcus:not(.active){
+			top: 0;
+			left: -100%;
+		}
+		.testRowcus .testItemcus  img{
+			width: 120px;
+			height: 120px;
+			border-radius: 50%;
+			object-fit: cover;
+			margin-bottom: 5px;
+			outline: 2px solid #006994;
+			outline-offset: 2px;
+		}
+		.testRowcus .testItemcus h3{
+			font-size: 30px;
+			font-style: italic;
+			padding: 7px;
+		}
+		.testRowcus .testItemcus h4{
+			font-style: italic;
+		}
+		.testRowcus .testItemcus p{
+			font-size: 18px;
+			letter-spacing: 1px;
+			line-height: 1.2;
+			padding: 10px;
+		}
+		.contents-wrapercus .indicatorscus{
+			position: absolute;
+			bottom: 30px;
+			left: 50%;
+			transform: translateX(-50%);
+			padding: 5px;
+			cursor: pointer;
+		}
+		.contents-wrapercus .indicatorscus .dotcus{
+			width: 15px;
+			height: 15px;
+			margin: 0px 3px;
+			border: 3px solid #aaa;
+			border-radius: 50%;
+			display: inline-block;
+			transition: background-color 0.5s ease;
+		}
+		.contents-wrapercus .indicatorscus .activecus{
+			background-color: #006994;
+		}
+		@keyframes next1{
+			from{
+				left: 0%;
+			}
+			to{
+				left: -100%;
+			}
+		}
+		@keyframes next2{
+			from{
+				left: 100%;
+			}
+			to{
+				left: 0%;
+			}
+		}
+
+		@keyframes prev1{
+			from{
+				left: 0%;
+			}
+			to{
+				left: 100%;
+			}
+		}
+		@keyframes prev2{
+			from{
+				left: -100%;
+			}
+			to{
+				left: 0%;
+			}
+		}
+
+		@media(max-width: 550px){
+			.containercus .contents-wrapercus{
+				width: 90%;
+			}
+			.contents-wrapercus .headercus h1{
+				font-size: 32px;
+			}
+			.testRowcus .testItemcus h3{
+				font-size: 26px;
+			}
+			.testRowcus .testItemcus p{
+				font-size: 16px;
+				letter-spacing: initial;
+				line-height: initial;
+			}
+
+		}
+	</style>
+</head>
+<body>
+<div class="containercus">
+	
+	<div class="contents-wrapercus">
+		
+		<section class="headercus"><h1>Testimonial</h1></section>
+
+		<section class="testRowcus">
+			
+			<div class="testItem activecus">
+				<img src="model-1.jpg">
+				<h3>Jane Doe</h3>
+				<h4>San Francisco, USA</h4>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+			</div>
+
+			<div class="testItemcus">
+				<img src="model-2.jpg">
+				<h3>Jane Doe</h3>
+				<h4>San Francisco, USA</h4>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+			</div>
+
+			<div class="testItemcus">
+				<img src="model-3.jpg">
+				<h3>Jane Doe</h3>
+				<h4>San Francisco, USA</h4>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+			</div>
+
+			<div class="testItemcus">
+				<img src="model-4.jpg">
+				<h3>Jane Doe</h3>
+				<h4>San Francisco, USA</h4>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+			</div>
+
+			<div class="testItemcus">
+				<img src="model-5.jpg">
+				<h3>Jane Doe</h3>
+				<h4>San Francisco, USA</h4>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+			</div>
+
+		</section>
+
+		<section class="indicatorscus">
+			<div class="dot activecus" attr='0' onclick="switchTest(this)"></div>
+			<div class="dotcus" attr='1' onclick="switchTest(this)"></div>
+			<div class="dotcus" attr='2' onclick="switchTest(this)"></div>
+			<div class="dotcus" attr='3' onclick="switchTest(this)"></div>
+			<div class="dotcus" attr='4' onclick="switchTest(this)"></div>
+		</section>
+
+	</div>
+</div>
+
+<script type="text/javascript">
+	
+	// Access the testimonials
+	let testSlide = document.querySelectorAll('.testItemcus');
+	// Access the indicators
+	let dots = document.querySelectorAll('.dotcus');
+
+	var counter = 0;
+
+	// Add click event to the indicators
+	function switchTest(currentTest){
+		currentTest.classList.add('active');
+		var testId = currentTest.getAttribute('attr');
+		if(testId > counter){
+			testSlide[counter].style.animation = 'next1 0.5s ease-in forwards';
+			counter = testId;
+			testSlide[counter].style.animation = 'next2 0.5s ease-in forwards';
+		}
+		else if(testId == counter){return;}
+		else{
+			testSlide[counter].style.animation = 'prev1 0.5s ease-in forwards';
+			counter = testId;
+			testSlide[counter].style.animation = 'prev2 0.5s ease-in forwards';
+		}
+		indicators();
+	}
+
+	// Add and remove active class from the indicators
+	function indicators(){
+		for(i = 0; i < dots.length; i++){
+			dots[i].className = dots[i].className.replace(' active', '');
+		}
+		dots[counter].className += ' active';
+	}
+
+	// Code for auto sliding
+	function slideNext(){
+		testSlide[counter].style.animation = 'next1 0.5s ease-in forwards';
+		if(counter >= testSlide.length - 1){
+			counter = 0;
+		}
+		else{
+			counter++;
+		}
+		testSlide[counter].style.animation = 'next2 0.5s ease-in forwards';
+		indicators();
+	}
+	function autoSliding(){
+		deleteInterval = setInterval(timer, 2000);
+		function timer(){
+			slideNext();
+			indicators();
+		}
+	}
+	autoSliding();
+
+	// Stop auto sliding when mouse is over the indicators
+	const container = document.querySelector('.indicators');
+	container.addEventListener('mouseover', pause);
+	function pause(){
+		clearInterval(deleteInterval);
+	}
+
+	// Resume sliding when mouse is out of the indicators
+	container.addEventListener('mouseout', autoSliding);
+
+</script>
+</body>
+</html>

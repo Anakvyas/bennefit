@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.css"
+        integrity="sha512-HXXR0l2yMwHDrDyxJbrMD9eLvPe3z3qL3PPeozNTsiHJEENxx8DH2CxmV05iwG0dwoz5n4gQZQyYLUNt1Wdgfg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="index.css">
+    <title>WEIGHING MACHINE</title>
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="card">
+            <div class="left">
+                <div class="logo-icon">
+                    <img src="logo.png" alt="">
+                </div>
+                <div class="text">
+                    <div class="logo"><img src="logo.png" alt=""></div>
+                    <div class="price">₹5499.00</div>
+                    <div class="title">BENNEFIT FITNESS BAND (BFB)</div>
+                    <button class="know-more">Know More</button>
+                </div>
+            </div>
+            <div class="description">
+                <div class="description-icon">
+                    <img src="logo.png" alt="">
+                </div>
+                <div class="text">
+                    <div class="logo"><img src="logo.png" alt=""></div>
+                    <div class="title">BENNEFIT FITNESS BAND (BFB)</div>
+                    <div class="content">
+                        Lorem Quo facilis deleniti unde vero doloremque suscipit expedita laborum quam, obcaecati
+                        cupiditate deserunt in voluptatibus fugit exercitationem doloribus, illum veritatis minus sequi?
+                        Esse quo voluptas tempore.
+                        <br>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus ipsa soluta laboriosam ipsam
+                        molestiae dolore pariatur in odit nesciunt ex!
+                    </div>
+                    <div class="rating">
+                        <div class="stars">
+                            <i class="ri-star-s-fill" style="color: #3dfb28;"></i>
+                            <i class="ri-star-s-fill" style="color: #3dfb28"></i>
+                            <i class="ri-star-s-fill" style="color:#3dfb28;"></i>
+                            <i class="ri-star-s-fill" style="color:#43f430;"></i>
+                            <i class="ri-star-s-fill"></i>
+                        </div>
+                        <span>(55)</span>
+                    </div>
+                    <button class="buy">Let's Buy</button>
+                </div>
+            </div>
+            <div class="right">
+                
+                <div class="sections">
+                    <div class="title">MEASURES : </div>
+                    <div class="sizes">
+                        <ul><li> Monitors  blood glucose level throughout the day and night.</li>
+                        <li>High and low heart rate notifications.</li>
+                        <li>Irregular rhythm notifications.</li>
+                        <li>Low cardio notifications.</li>
+                        <li><i class="fa-solid fa-heart-pulse"style= "color: #7add6f;"></i> Blood oxygen app.</li>
+                        <li>Temperature sensing.</li>
+                        <li>Cycle Tracking with retrospective ovulation estimates.</li>
+                        <li>Water resistant.</li>
+                        <li>Precision dual-frequency GPS.</li>
+                        <li> Cellular Connectivity.</li>
+                        <li><i class="fa-solid fa-battery-full" style="color: #7add6f;"></i>  Up to 36 hours.</li>
+                        <li>Fast charging</li>
+                        
+                        
+                        
+                        
+                        
+                        </ul>
+                    </div>
+                </div>
+                
+                <button>BUY NOW</button>
+            </div>
+            <div class="product">
+                <img src="Untitled.png" alt="" width="600px">
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"
+        integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+
+        var knowBtn = document.querySelector(".know-more");
+        var buyBtn = document.querySelector(".buy")
+
+
+        gsap.from(".card", {
+            scale: 0,
+            duration: 1,
+        })
+        gsap.from(".left", {
+            y: -1000,
+            duration: 0.7,
+            delay: 0.5
+        })
+        gsap.from(".right", {
+            y: 1000,
+            duration: 0.7,
+            delay: 1.5
+        })
+        gsap.from(".product", {
+            y: 1000,
+            duration: 0.7,
+            delay: 2
+        })
+
+        knowBtn.addEventListener("click", () => {
+            gsap.to(".left", {
+                width: "100%",
+                duration: 0.5
+            })
+            gsap.to(".right", {
+                width: "0%",
+                opacity: 0,
+                padding: 0,
+                duration: 0.5
+            })
+            gsap.to(".right .sections", {
+                display: "none",
+                opacity: 0,
+            })
+            gsap.to(".right button", {
+                display: "none",
+                opacity: 0,
+            })
+            gsap.to(".product", {
+                x: 50
+            })
+            gsap.to(".left", {
+                y: -200,
+                opacity: 0,
+                delay: 0.5
+            })
+            gsap.to(".description", {
+                y: 0,
+                opacity: 1,
+                delay: 0.5,
+                duration: 0.9,
+                display: "block"
+            })
+            gsap.from(".description-icon", {
+                y: -100,
+                opacity: 0,
+                delay: 1.4,
+                duration: 0.8,
+            })
+            gsap.to(".description .text .title, .description .text .content, .rating", {
+                y: 0,
+                opacity: 1,
+                delay: 1.4,
+                stagger: 0.2,
+            })
+        })
+        buyBtn.addEventListener("click", () => {
+            gsap.to(".description .text .title, .description .text .content, .rating", {
+                y: 100,
+                opacity: 0,
+            })
+            gsap.to(".description-icon", {
+                y: -100,
+                opacity: 0,
+            })
+            gsap.to(".description", {
+                y: -1000,
+                opacity: 0,
+                delay: 0.5,
+                duration: 1,
+                display: "none"
+            })
+            gsap.to(".product", {
+                x: "-57%",
+                delay: 0.5
+            })
+            gsap.to(".left", {
+                y: 0,
+                duration: 0.5,
+                opacity: 1,
+                delay: 0.5
+            })
+            gsap.to(".left", {
+                width: "60%",
+                delay: 1
+            })
+            gsap.to(".right", {
+                padding: "20px 60px",
+                width: "40%",
+                opacity: 1,
+                delay: 1.5,
+                duration: 0.5,
+                x: 0
+            })
+            gsap.to(".right .sections", {
+                display: "block",
+                opacity: 1,
+                delay: 1
+            })
+            gsap.to(".right button", {
+                display: "block",
+                opacity: 1,
+                delay: 1
+            })
+        })
+    </script>
+</body>
+
+</html>

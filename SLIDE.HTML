@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Image Slider</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background: #131b2a;
+
+        }
+        #doctors h1{
+            color: white;
+            font-size: 50px;
+        }
+        #doctors .doc {
+            background: rgba(250, 250, 250, 0.3);
+            width: 322px;
+            height: 404px;
+            box-shadow: 3px 3px 34px black;
+            color: white;
+            margin: 3px;
+            text-align: center;
+            margin-right: 38px;
+
+
+        }
+
+
+
+        #doctors .doc img {
+            width: 122px;
+            border-radius: 33px;
+            margin-top: 16px;
+            margin-left: 15px;
+
+
+        }
+
+        /* .slider-container {
+            width: 80%;
+            margin: 0 auto;
+            overflow: hidden;
+            position: relative;
+        } */
+
+        #doctors .slider {
+            display: flex;
+            transition: transform 0.3s ease-in-out;
+            position: absolute;
+            justify-content: space-evenly;
+            top: 34%;
+            left: 13%;
+        }
+
+
+        #doctors button {
+            margin-top: 664px;
+            margin-left: 10px;
+            padding: 10px 20px;
+            background-color: #0074d9;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+
+        }
+
+        #doctors button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>DOCTORS</h1>
+    <div class="slider-container">
+        <div class="slider">
+            <div class="doc"><img src="doc1.jpg" alt="Image 1">
+                <p></p>I am Dr. Maansi Uppal. I am a dietician. I have my
+                Bachelor's and Master's degree in Nutrition, Dietetics, or a related field. I pursue state licensure as
+                a Dietitian, as required. I have strong knowledge of human physiology, nutrition science, and dietary
+                guidelines.</p>
+                Together, we can promote wellness and transform lives through the science of nutrition.
+            </div>
+            <div class="doc"><img src="doc1.jpg" alt="Image 1">
+                <p> I am Dr. Maansi Uppal. I am a dietician. I have my
+                    Bachelor's and Master's degree in Nutrition, Dietetics, or a related field. I pursue state licensure
+                    as
+                    a Dietitian, as required. I have strong knowledge of human physiology, nutrition science, and
+                    dietary
+                    guidelines.</p>
+                Together, we can promote wellness and transform lives through the science of nutrition.
+            </div>
+            <div class="doc"><img src="doc1.jpg" alt="Image 1">
+                <p> I am Dr. Maansi Uppal. I am a dietician. I have my
+                    Bachelor's and Master's degree in Nutrition, Dietetics, or a related field. I pursue state licensure
+                    as
+                    a Dietitian, as required. I have strong knowledge of human physiology, nutrition science, and
+                    dietary
+                    guidelines.
+                    Together, we can promote wellness and transform lives through the science of nutrition.
+            </div>
+            </p>
+            <!-- Add more images as needed -->
+        </div>
+    </div>
+    <button class="prev-button">Previous</button>
+    <button class="next-button"> NEXT </button>
+    <script>const slider = document.querySelector(".slider");
+        const prevButton = document.querySelector(".prev-button");
+        const nextButton = document.querySelector(".next-button");
+
+        let imageIndex = 0;
+
+        nextButton.addEventListener("click", () => {
+            imageIndex++;
+            if (imageIndex > slider.children.length - 1) {
+                imageIndex = 0;
+            }
+            updateSlider();
+        });
+
+        prevButton.addEventListener("click", () => {
+            imageIndex--;
+            if (imageIndex < 0) {
+                imageIndex = slider.children.length - 1;
+            }
+            updateSlider();
+        });
+
+        function updateSlider() {
+            const translateX = -imageIndex * 100; // Adjust this value based on image width
+            slider.style.transform = `translateX(${translateX}%)`;
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,37 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: #131b2a;
+}
+.hero .pic {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+}
+.head{
+    font-size: 30px;
+    font-weight: bolder;
+    color: aliceblue;
+    text-align: center;
+    margin-top: 52px;
+    left: 30%;
+    border: 2px solid white;
+}
+
+.pic .ab {
+    width: 400px;
+    height: 360px;
+  
+    padding: 11px 14px 11px;
+    /* border: 2px solid rgb(254, 253, 253); */
+    box-shadow: 2px 2px 5px rgb(57, 56, 56);
+    margin: 48px;
+
+
+
+}

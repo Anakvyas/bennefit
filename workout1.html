@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BMI Calculator</title>
+    <style>
+        body {
+            background: #131b2a;
+            color: white;
+
+        }
+
+        h1 {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 33px;
+        }
+
+        .container {
+            position: absolute;
+            top: 20%;
+            left: 40%;
+            height: 700px;
+            width: 600px;
+        }
+        input{
+            width: 400px;
+            height: 44px;
+            margin: 10px;
+        }
+        .logo img {
+            position: absolute;
+            width: 120px;
+            top: 3%;
+            left: 5%;
+        }
+        #btn{
+            width: 100px;
+            height: 20px;
+
+        }
+        #weightloss{
+            position: absolute;
+            top: 120%;
+            left: 45%;
+            visibility: hidden;
+
+        }
+        h1{
+            color: pink;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="logo"><img src="logo.png" alt="" widh="40px"></div>
+    <div class="container">
+        <h1>BODY MASS INDEX (BMI) CALCULATOR</h1>
+        <!-- Option for providing height
+            and weight to the user-->
+        <p>Height (in cm)</p>
+
+        <input type="text" id="height" />
+
+        <p>Weight (in kg)</p>
+
+        <input type="text" id="weight" />
+
+        <button id="btn">Calculate</button>
+
+        <div id="result"></div>
+
+         <div id="weightloss" onclick="myfunction2()"><img src="weightloss.jpg" alt="" width="500px"></div > 
+    </div>
+    <script src="workout.js"></script>
+</body>
+
+</html>
